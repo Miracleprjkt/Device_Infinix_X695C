@@ -1,4 +1,4 @@
-service vendor.vibrator-rosemary /vendor/bin/hw/android.hardware.vibrator-service.rosemary
+service vendor.vibrator-X695C /vendor/bin/hw/android.hardware.vibrator-service.X695C
     class hal
     user system
     group system input

@@ -1,5 +1,5 @@
 runtime_resource_overlay {
-    name: "TetheringConfigOverlayRosemary",
+    name: "TetheringConfigOverlayX695C",
     theme: "TetheringConfigOverlay",
     sdk_version: "current",
     vendor: true

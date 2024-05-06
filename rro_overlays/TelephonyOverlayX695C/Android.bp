@@ -1,5 +1,5 @@
 runtime_resource_overlay {
-    name: "TelephonyOverlayRosemary",
+    name: "TelephonyOverlayX695C",
     sdk_version: "current",
     resource_dirs: ["res"],
     vendor: true,

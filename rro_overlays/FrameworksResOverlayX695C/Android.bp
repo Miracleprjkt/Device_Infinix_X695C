@@ -1,5 +1,5 @@
 runtime_resource_overlay {
-    name: "FrameworksResOverlayRosemary",
+    name: "FrameworksResOverlayX695C",
     sdk_version: "current",
     resource_dirs: ["res"],
     vendor: true,

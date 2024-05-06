@@ -15,7 +15,7 @@
 //
 
 runtime_resource_overlay {
-    name: "SystemUIOverlayRosemary",
+    name: "SettingsProviderOverlayX695C",
     sdk_version: "current",
     resource_dirs: ["res"],
     vendor: true,

@@ -14,9 +14,9 @@
 // limitations under the License.
 
 cc_binary {
-    name: "android.hardware.light-service.rosemary",
-    init_rc: ["android.hardware.light-service.rosemary.rc"],
-    vintf_fragments: ["android.hardware.light-service.rosemary.xml"],
+    name: "android.hardware.light-service.X695C",
+    init_rc: ["android.hardware.light-service.X695C.rc"],
+    vintf_fragments: ["android.hardware.light-service.X695C.xml"],
     relative_install_path: "hw",
     srcs: [
         "main.cpp",

@@ -251,7 +251,7 @@ PRODUCT_PACKAGES += \
 
 # Lights
 PRODUCT_PACKAGES += \
-    android.hardware.light-service.rosemary
+    android.hardware.light-service.X695C
 
 # Lineage Health
 PRODUCT_PACKAGES += \
@@ -326,13 +326,13 @@ PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += \
     $(LOCAL_PATH)/overlay-lineage
 
 PRODUCT_PACKAGES += \
-    CarrierConfigOverlayRosemary \
-    FrameworksResOverlayRosemary \
-    SettingsProviderOverlayRosemary \
-    SystemUIOverlayRosemary \
-    TelephonyOverlayRosemary \
-    TetheringConfigOverlayRosemary \
-    WifiOverlayRosemary
+    CarrierConfigOverlayX695C \
+    FrameworksResOverlayX695C \
+    SettingsProviderOverlayX695C \
+    SystemUIOverlayX695C \
+    TelephonyOverlayX695C \
+    TetheringConfigOverlayX695C \
+    WifiOverlayX695C
 
 # Power
 PRODUCT_PACKAGES += \
@@ -502,4 +502,4 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/wifi/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant_overlay.conf
 
 # Inherit the proprietary files
-$(call inherit-product, vendor/xiaomi/rosemary/rosemary-vendor.mk)
+$(call inherit-product, vendor/infinix/X695C/X695C-vendor.mk)

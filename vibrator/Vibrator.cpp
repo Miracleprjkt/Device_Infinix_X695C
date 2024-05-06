@@ -4,7 +4,7 @@
  * SPDX-License-Identifer: Apache-2.0
  */
 
-#define LOG_TAG "vibrator.rosemary"
+#define LOG_TAG "vibrator.X695C"
 
 #include "vibrator-impl/Vibrator.h"
 

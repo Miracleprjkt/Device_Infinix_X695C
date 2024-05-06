@@ -1,5 +1,5 @@
 runtime_resource_overlay {
-    name: "WifiOverlayRosemary",
+    name: "WifiOverlayX695C",
     theme: "WifiOverlay",
     sdk_version: "current",
     vendor: true

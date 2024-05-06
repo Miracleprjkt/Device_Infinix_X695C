@@ -8,8 +8,8 @@
 
 set -e
 
-DEVICE=rosemary
-VENDOR=xiaomi
+DEVICE=X695C
+VENDOR=infinix
 
 # Load extract_utils and do some sanity checks
 MY_DIR="${BASH_SOURCE%/*}"

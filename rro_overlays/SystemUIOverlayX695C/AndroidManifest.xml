@@ -12,7 +12,7 @@
 -->
 
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.android.systemui.overlay.rosemary">
+    package="com.android.systemui.overlay.X695C">
 
   <application android:hasCode="false"/>
   <overlay android:targetPackage="com.android.systemui"

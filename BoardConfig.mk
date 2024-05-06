@@ -4,7 +4,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-DEVICE_PATH := device/xiaomi/rosemary
+DEVICE_PATH := device/infinix/X695C
 
 # A/B
 AB_OTA_UPDATER := true
@@ -46,7 +46,7 @@ TARGET_2ND_CPU_VARIANT_RUNTIME := cortex-a55
 
 # Bootloader
 BOARD_VENDOR := xiaomi
-TARGET_BOOTLOADER_BOARD_NAME := rosemary
+TARGET_BOOTLOADER_BOARD_NAME := X695C
 TARGET_NO_BOOTLOADER := true
 
 # Boot Image
@@ -84,23 +84,19 @@ ODM_MANIFEST_SKUS += nfc
 ODM_MANIFEST_NFC_FILES := $(DEVICE_PATH)/manifest_nfc.xml
 
 # Init
-TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):init_rosemary
-TARGET_RECOVERY_DEVICE_MODULES := init_rosemary
+TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):init_X695C
+TARGET_RECOVERY_DEVICE_MODULES := init_X695C
 
-# Kernel
-TARGET_KERNEL_ARCH := arm64
-TARGET_KERNEL_HEADER_ARCH := arm64
-TARGET_KERNEL_SOURCE := kernel/xiaomi/mt6785
-TARGET_KERNEL_CONFIG := rosemary_defconfig
-BOARD_KERNEL_SEPARATED_DTBO := true
-BOARD_CUSTOM_DTBOIMG_MK := $(DEVICE_PATH)/dtbo/dtbo.mk
-BOARD_KERNEL_IMAGE_NAME := Image.gz
+BOARD_KERNEL_IMAGE_NAME := Image
+BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)/prebuilt/dtbo.img
+TARGET_PREBUILT_DTB := $(DEVICE_PATH)/prebuilt/dtb.img
+TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/kernel
 
 # Lineage Health
 TARGET_HEALTH_CHARGING_CONTROL_SUPPORTS_BYPASS := false
 
 # OTA assert
-TARGET_OTA_ASSERT_DEVICE := rosemary,secret,maltose
+TARGET_OTA_ASSERT_DEVICE := X695C,X695
 
 # Partitions
 BOARD_FLASH_BLOCK_SIZE := 131072                   # 2048      * 64   (pagesize)
@@ -202,4 +198,4 @@ BOARD_VNDK_VERSION := current
 WIFI_HIDL_FEATURE_DUAL_INTERFACE := true
 
 # Inherit the proprietary files
-include vendor/xiaomi/rosemary/BoardConfigVendor.mk
+include vendor/infinix/X695C/BoardConfigVendor.mk
