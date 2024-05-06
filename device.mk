@@ -467,11 +467,11 @@ PRODUCT_PACKAGES += \
 
 # USB
 PRODUCT_PACKAGES += \
-    android.hardware.usb@1.1-service.rosemary
+    android.hardware.usb@1.1-service.X695C
 
 # Vibrator
 PRODUCT_PACKAGES += \
-    android.hardware.vibrator-service.rosemary
+    android.hardware.vibrator-service.X695C
 
 # VNDK
 PRODUCT_PACKAGES += \
@@ -490,7 +490,7 @@ PRODUCT_PACKAGES += \
     android.hardware.wifi.hostapd@1.2.vendor
 
 PRODUCT_PACKAGES += \
-    android.hardware.wifi@1.0-service-lazy.rosemary
+    android.hardware.wifi@1.0-service-lazy.X695C
 
 PRODUCT_PACKAGES += \
     libkeystore-wifi-hidl \
