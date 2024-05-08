@@ -176,5 +176,8 @@ DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
 # Wifi
 WIFI_HIDL_FEATURE_DUAL_INTERFACE := true
 
+# Releasetools
+TARGET_RELEASETOOLS_EXTENSIONS := $(DEVICE_PATH)
+
 # Inherit the proprietary files
 include vendor/infinix/X695C/BoardConfigVendor.mk
