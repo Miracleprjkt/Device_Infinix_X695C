@@ -5,6 +5,7 @@
 #
 
 DEVICE_PATH := device/infinix/X695C
+KERNEL_PATH := $(DEVICE_PATH)-kernel
 
 # A/B
 AB_OTA_UPDATER := true
@@ -62,10 +63,12 @@ BOARD_DTB_OFFSET := 0x0bc08000
 BOARD_KERNEL_SEPARATED_DTBO := true
 BOARD_BOOT_HEADER_VERSION := 2
 
-BOARD_KERNEL_IMAGE_NAME := kernel
-BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)/prebuilt/dtbo.img
-TARGET_PREBUILT_DTB := $(DEVICE_PATH)/prebuilt/dtb.img
-TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/kernel
+# Kernel
+TARGET_KERNEL_CONFIG := X695C_defconfig # no file, only make build system happy
+TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)-kernel/kernel # automatically copied
+TARGET_PREBUILT_DTB := $(DEVICE_PATH)-kernel/dtb.img # for mkbootimg only
+BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)-kernel/dtbo.img # automatically copied
+TARGET_FORCE_PREBUILT_KERNEL := true # dont really build with our imcomplete "source"
 
 BOARD_MKBOOTIMG_ARGS += --base $(BOARD_KERNEL_BASE)
 BOARD_MKBOOTIMG_ARGS += --pagesize $(BOARD_KERNEL_PAGESIZE)
