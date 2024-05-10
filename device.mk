@@ -102,4 +102,4 @@ PRODUCT_PACKAGES += \
     
 # Light
 PRODUCT_PACKAGES += \
-    android.hardware.light@2.0-service.X693
+    android.hardware.light@2.0-service.X695C
