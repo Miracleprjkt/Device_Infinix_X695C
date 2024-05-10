@@ -15,12 +15,9 @@ AB_OTA_PARTITIONS := \
     boot \
     dtbo \
     system \
-    system_ext \
     product \
     vendor \
-    vbmeta \
-    vbmeta_system \
-    vbmeta_vendor
+    vbmeta
 
 BUILD_BROKEN_DUP_RULES := true
 BUILD_BROKEN_PREBUILT_ELF_FILES := true
@@ -48,6 +45,10 @@ TARGET_2ND_CPU_VARIANT_RUNTIME := cortex-a53
 TARGET_BOOTLOADER_BOARD_NAME := X695C
 TARGET_NO_BOOTLOADER := true
 
+# Bootloader
+TARGET_BOOTLOADER_BOARD_NAME := X695C
+TARGET_NO_BOOTLOADER := true
+
 # Kernel
 BOARD_KERNEL_CMDLINE := bootopt=64S3,32N2,64N2
 BOARD_KERNEL_CMDLINE += androidboot.init_fatal_reboot_target=recovery
@@ -63,12 +64,11 @@ BOARD_DTB_OFFSET := 0x0bc08000
 BOARD_KERNEL_SEPARATED_DTBO := true
 BOARD_BOOT_HEADER_VERSION := 2
 
-# Kernel
-TARGET_KERNEL_CONFIG := X695C_defconfig # no file, only make build system happy
-TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)-kernel/kernel # automatically copied
-TARGET_PREBUILT_DTB := $(DEVICE_PATH)-kernel/dtb.img # for mkbootimg only
-BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)-kernel/dtbo.img # automatically copied
-TARGET_FORCE_PREBUILT_KERNEL := true # dont really build with our imcomplete "source"
+# Kernel - prebuilt
+TARGET_FORCE_PREBUILT_KERNEL := true
+TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilts/kernel
+TARGET_PREBUILT_DTB := $(DEVICE_PATH)/prebuilts/dtb.img
+BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)/prebuilts/dtbo.img
 
 BOARD_MKBOOTIMG_ARGS += --base $(BOARD_KERNEL_BASE)
 BOARD_MKBOOTIMG_ARGS += --pagesize $(BOARD_KERNEL_PAGESIZE)
@@ -112,7 +112,6 @@ BOARD_SUPER_PARTITION_GROUPS := main
 BOARD_MAIN_SIZE := 5855248384
 BOARD_MAIN_PARTITION_LIST := \
     product \
-    vendor \
     system \
     system_ext
 
@@ -135,6 +134,7 @@ BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_USERDATAIMAGE_FILE_SYSTEM_TYPE := f2fs
 
 TARGET_COPY_OUT_VENDOR := vendor
+BUILD_WITHOUT_VENDOR := true
 TARGET_COPY_OUT_PRODUCT := product
 TARGET_COPY_OUT_SYSTEM_EXT := system_ext
 
