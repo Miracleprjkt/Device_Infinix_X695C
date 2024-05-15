@@ -1,3 +1,5 @@
+
+<manifest version="1.0" type="framework">
 <hal format="hidl" optional="true">
     <name>android.hardware.boot</name>
     <version>1.0</version>
@@ -287,3 +289,4 @@
         <instance>default</instance>
     </interface>
 </hal>
+</manifest>
