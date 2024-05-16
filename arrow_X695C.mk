@@ -9,18 +9,16 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit some common Lineage stuff.
-$(call inherit-product, vendor/arrow/config/common.mk)
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # Inherit from Infinix-X695C device
 $(call inherit-product, device/infinix/X695C/device.mk)
 
-# Inherit some common ArrowOS stuff
 TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_INCLUDE_PIXEL_CHARGER := true
-DEVICE_MAINTAINER := Miraclev1
 
 PRODUCT_DEVICE := X695C
-PRODUCT_NAME := arrow_X695C
+PRODUCT_NAME := lineage_X695C
 PRODUCT_BRAND := Infinix
 PRODUCT_MODEL := Infinix X695C
 PRODUCT_MANUFACTURER := infinix

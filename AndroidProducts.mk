@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/arrow_X695C.mk
+    $(LOCAL_DIR)/lineage_X695C.mk
 
 COMMON_LUNCH_CHOICES := \
-    arrow_X695C-user \
-    arrow_X695C-userdebug \
-    arrow_X695C-eng
+    lineage_X695C-user \
+    lineage_X695C-userdebug \
+    lineage_X695C-eng
