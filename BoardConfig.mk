@@ -186,7 +186,5 @@ WIFI_HIDL_FEATURE_DUAL_INTERFACE := true
 # Releasetools
 TARGET_RELEASETOOLS_EXTENSIONS := $(DEVICE_PATH)
 
-# Prebuilts
-TARGET_USES_PREBUILT_DYNAMIC_PARTITIONS := true
-BUILD_WITHOUT_VENDOR := true
-BOARD_PREBUILT_VENDORIMAGE := $(VENDOR_PATH)/vendor.img
+# Inherit the proprietary files
+include vendor/infinix/X695C/BoardConfigVendor.mk
