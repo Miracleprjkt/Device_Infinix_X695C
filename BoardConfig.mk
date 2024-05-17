@@ -5,6 +5,7 @@
 #
 
 DEVICE_PATH := device/infinix/X695C
+VENDOR_PATH := vendor/infinix/X695C-prebuilt
 
 # A/B
 AB_OTA_UPDATER := true
@@ -185,5 +186,7 @@ WIFI_HIDL_FEATURE_DUAL_INTERFACE := true
 # Releasetools
 TARGET_RELEASETOOLS_EXTENSIONS := $(DEVICE_PATH)
 
-# Inherit the proprietary files
-include vendor/infinix/X695C/BoardConfigVendor.mk
+# Prebuilts
+TARGET_USES_PREBUILT_DYNAMIC_PARTITIONS := true
+BUILD_WITHOUT_VENDOR := true
+BOARD_PREBUILT_VENDORIMAGE := $(VENDOR_PATH)/vendor.img
