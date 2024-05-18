@@ -22,9 +22,6 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 # Inherit virtual_ab_ota product
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
 
-# Get non-open-source specific aspects
-$(call inherit-product, vendor/infinix/X695C/X695C-vendor.mk)
-
 # A/B
 PRODUCT_PACKAGES += \
     android.hardware.boot@1.2-impl \
@@ -78,16 +75,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/permissions/hiddenapi-package-allowlist-product.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/hotword-hiddenapi-package-allowlist.xml \
     $(LOCAL_PATH)/configs/permissions/privapp-permissions-product.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-product.xml
-
-# IMS
-PRODUCT_BOOT_JARS += \
-    mediatek-common \
-    mediatek-framework \
-    mediatek-ims-base \
-    mediatek-ims-common \
-    mediatek-telecom-common \
-    mediatek-telephony-base \
-    mediatek-telephony-common
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/permissions/privapp-permissions-com.mediatek.ims.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-com.mediatek.ims.xml

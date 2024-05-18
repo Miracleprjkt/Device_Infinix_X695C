@@ -1185,10 +1185,6 @@ vendor/etc/wifi/wpa_supplicant.conf
 vendor/etc/wifi/wpa_supplicant_overlay.conf
 
 # Miscellaneous
-odm/etc/vintf/manifest_dsds.xml
-odm/etc/vintf/manifest_qsqs.xml
-odm/etc/vintf/manifest_ss.xml
-odm/etc/vintf/manifest_tsts.xml
 vendor/app/EmCamera/EmCamera.apk
 vendor/app/GoogleNetworkStackResOverlay/GoogleNetworkStackResOverlay.apk
 vendor/app/GoogleTetheringResOverlay/GoogleTetheringResOverlay.apk

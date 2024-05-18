@@ -12,7 +12,7 @@
     <name>android.hardware.radio</name>
     <version>1.0-5</version>
     <interface>
-        <name> IRadio</name>
+        <name>IRadio</name>
         <instance>em1</instance>
         <instance>em2</instance>
         <instance>imsAospSlot1</instance>
@@ -22,12 +22,8 @@
         <instance>imsAospSlot2 android.hardware.radio@1.5</instance>
     </interface>
     <interface>
-        <name> ISap</name>
+        <name>ISap</name>
         <instance>slot2 android.hardware.radio@1.5</instance>
-    </interface>
-    <interface>
-        <name>IRadio</name>
-        <instance>imsAospSlot1</instance>
     </interface>
 </hal>
 <hal format="hidl" optional="true">
@@ -42,7 +38,7 @@
     <name>vendor.mediatek.hardware.apuware.utils</name>
     <version>1.0</version>
     <interface>
-        <name> IApuwareUtils</name>
+        <name>IApuwareUtils</name>
         <instance>default</instance>
     </interface>
 </hal>
@@ -50,7 +46,7 @@
     <name>vendor.mediatek.hardware.apuware.xrp</name>
     <version>1.0</version>
     <interface>
-        <name> INeuronXrp</name>
+        <name>INeuronXrp</name>
         <instance>default</instance>
     </interface>
 </hal>
@@ -66,7 +62,7 @@
     <name>vendor.mediatek.hardware.bluetooth.audio</name>
     <version>2.0-1</version>
     <interface>
-        <name>IBluetoothAudioProviders Factory</name>
+        <name>IBluetoothAudioProviders</name>
         <instance>default</instance>
     </interface>
 </hal>
@@ -90,7 +86,7 @@
     <name>vendor.mediatek.hardware.camera.isphal</name>
     <version>1.0</version>
     <interface>
-        <name> IISPModule</name>
+        <name>IISPModule</name>
         <instance>internal/0</instance>
     </interface>
 </hal>
@@ -98,7 +94,7 @@
     <name>vendor.mediatek.hardware.camera.postproc</name>
     <version>1.0</version>
     <interface>
-        <name> IPostDevice</name>
+        <name>IPostDevice</name>
         <instance>internal/0</instance>
     </interface>
 </hal>
@@ -114,7 +110,7 @@
     <name>vendor.mediatek.hardware.keyinstall</name>
     <version>1.0</version>
     <interface>
-        <name> IKeyinstall</name>
+        <name>IKeyinstall</name>
         <instance>default vendor.mediatek.hardware.keymaster_attestation@1.1</instance>
     </interface>
 </hal>
@@ -138,9 +134,6 @@
         <instance>mtk_meta2mnld</instance>
         <instance>mtk_mn1d2debugService</instance>
         <instance>mtk_mtklogger2mnld</instance>
-    </interface>
-    <interface>
-        <name> ILbs</name>
         <instance>mtk_mn1d2mtklogger vendor.mediatek.hardware.lbs@1.0</instance>
     </interface>
 </hal>
@@ -148,7 +141,7 @@
     <name>vendor.mediatek.hardware.log</name>
     <version>1.0</version>
     <interface>
-        <name> ILog</name>
+        <name>ILog</name>
         <instance>ATMWiFiHidlServer</instance>
         <instance>ConnsysFWHidlServer</instance>
         <instance>MobileLogHidlServer</instance>
@@ -159,7 +152,7 @@
     <name>vendor.mediatek.hardware.mdmonitor</name>
     <version>1.0</version>
     <interface>
-        <name> IMDMonitorService</name>
+        <name>IMDMonitorService</name>
         <instance>default</instance>
     </interface>
 </hal>
@@ -175,7 +168,7 @@
     <name>vendor.mediatek.hardware.mtkcodecservice</name>
     <version>1.0-1</version>
     <interface>
-        <name>IMtkCodec Service</name>
+        <name>IMtkCodec</name>
         <instance>default</instance>
     </interface>
 </hal>
@@ -183,11 +176,11 @@
     <name>vendor.mediatek.hardware.mtkpower</name>
     <version>1.0-1</version>
     <interface>
-        <name> IMtkPerf</name>
+        <name>IMtkPerf</name>
         <instance>default</instance>
     </interface>
     <interface>
-        <name> IMtkPower</name>
+        <name>IMtkPower</name>
         <instance>default</instance>
     </interface>
 </hal>
@@ -205,9 +198,6 @@
         <instance>mtkSe1</instance>
         <instance>mtkSlot1</instance>
         <instance>mtkSmartRatSwitch1</instance>
-    </interface>
-    <interface>
-        <name> IMtkRadioEx</name>
         <instance>mtkAssist1</instance>
         <instance>mtkCap1</instance>
         <instance>mtkCap2</instance>
@@ -221,7 +211,7 @@
     <name>vendor.mediatek.hardware.netdagent</name>
     <version>1.0</version>
     <interface>
-        <name> INetdagent</name>
+        <name>INetdagent</name>
         <instance>default</instance>
     </interface>
 </hal>
@@ -229,7 +219,7 @@
     <name>vendor.mediatek.hardware.nvram</name>
     <version>1.0-1</version>
     <interface>
-        <name> INvram</name>
+        <name>INvram</name>
         <instance>default</instance>
     </interface>
 </hal>
