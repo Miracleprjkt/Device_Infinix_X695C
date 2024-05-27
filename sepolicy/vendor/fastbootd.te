@@ -1,3 +1,0 @@
-#============= fastbootd ==============
-allow fastbootd default_android_hwservice:hwservice_manager find;
-allow fastbootd hal_health_hwservice:hwservice_manager find;
