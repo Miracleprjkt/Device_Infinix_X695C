@@ -24,3 +24,8 @@ prebuilt_etc {
     sub_dir: "init"
 }
 
+prebuilt_etc {
+    name: "init.safailnet.rc",
+    src: "etc/init.safailnet.rc", 
+    sub_dir: "init"
+}
