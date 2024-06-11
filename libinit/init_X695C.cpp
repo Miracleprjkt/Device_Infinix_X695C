@@ -107,7 +107,7 @@ void vendor_load_properties()
     string model = "Infinix Note 10 Pro";
 
     // Override all partitions' props
-    string prop_partitions[] = { "", "odm.", "product.", "system.", "system_ext.", "vendor." };
+    string prop_partitions[] = { "product.", "system.", "system_ext.", "vendor." };
     for (const string &prop : prop_partitions) {
         property_override(string("ro.product.") + prop + string("model"), model);
     }
