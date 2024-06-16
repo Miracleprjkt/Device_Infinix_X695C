@@ -28,5 +28,5 @@ prebuilt_etc {
     name: "init.safailnet.rc",
     src: "etc/init/hw/init.safailnet.rc", 
     sub_dir: "init/hw",
-    vendor: true;
+    vendor: true
 }
