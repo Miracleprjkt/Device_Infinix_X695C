@@ -7,19 +7,6 @@
 DEVICE_PATH := device/infinix/X695C
 VENDOR_PATH := vendor/infinix/X695C-prebuilt
 
-# A/B
-AB_OTA_UPDATER := true
-BOARD_USES_RECOVERY_AS_BOOT := true
-
-AB_OTA_PARTITIONS := \
-    boot \
-    dtbo \
-    system \
-    product \
-    vendor \
-    system_ext \
-    vbmeta
-
 ALLOW_MISSING_DEPENDENCIES := true
 BUILD_BROKEN_MISSING_REQUIRED_MODULES := true
 BUILD_BROKEN_DUP_RULES := true
@@ -133,6 +120,7 @@ TARGET_COPY_OUT_PRODUCT := product
 TARGET_COPY_OUT_SYSTEM_EXT := system_ext
 
 #metadata
+BOARD_USES_RECOVERY_AS_BOOT := true
 BOARD_ROOT_EXTRA_FOLDERS += metadata
 BOARD_USES_METADATA_PARTITION := true
 
