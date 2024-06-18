@@ -16,6 +16,9 @@
 
 DEVICE_PATH := device/infinix/X695C
 
+# Inherit the proprietary files
+$(call inherit-product, vendor/infinix/X695C/X695C-vendor.mk)
+
 # Enable updating of APEXes
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 

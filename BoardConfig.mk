@@ -5,7 +5,6 @@
 #
 
 DEVICE_PATH := device/infinix/X695C
-VENDOR_PATH := vendor/infinix/X695C-prebuilt
 
 ALLOW_MISSING_DEPENDENCIES := true
 BUILD_BROKEN_MISSING_REQUIRED_MODULES := true
@@ -95,7 +94,6 @@ BOARD_SUPER_PARTITION_GROUPS := main
 BOARD_MAIN_SIZE := 5855248384
 BOARD_MAIN_PARTITION_LIST := \
     product \
-    vendor \
     system \
     system_ext
 
@@ -181,6 +179,6 @@ DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := $(DEVICE_PATH)/vintf/framework_com
 # Releasetools
 TARGET_RELEASETOOLS_EXTENSIONS := $(DEVICE_PATH)
 
-# Prebuilts
-TARGET_USES_PREBUILT_DYNAMIC_PARTITIONS := true
-BOARD_PREBUILT_VENDORIMAGE := $(VENDOR_PATH)/vendor.img
+# Vendor
+BUILD_WITHOUT_VENDOR := true
+include vendor/xiaomi/rosemary/BoardConfigVendor.mk
