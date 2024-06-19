@@ -22,6 +22,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 # Inherit virtual_ab_ota product
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
 
+# Get non-open-source specific aspects
+$(call inherit-product, vendor/infinix/X695C/X695C-vendor.mk)
+
 # A/B
 AB_OTA_UPDATER := true
 AB_OTA_PARTITIONS := \
@@ -34,6 +37,7 @@ AB_OTA_PARTITIONS := \
     vbmeta
 
 PRODUCT_PACKAGES += \
+    bootctrl.default \
     android.hardware.boot@1.2-impl \
     android.hardware.boot@1.2-impl.recovery \
     android.hardware.boot@1.2-service
@@ -63,7 +67,10 @@ PRODUCT_PACKAGES += \
     otapreopt_script
 
 # Soong namespaces
-PRODUCT_SOONG_NAMESPACES += $(DEVICE_PATH)
+PRODUCT_SOONG_NAMESPACES += \
+    $(LOCAL_PATH) \
+    hardware/mediatek \
+    hardware/transsion
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
@@ -102,7 +109,7 @@ PRODUCT_COPY_FILES += \
 
 # Fstab
 PRODUCT_COPY_FILES += \
-    $(DEVICE_PATH)/rootdir/etc/fstab.mt6785:$(TARGET_COPY_OUT_RAMDISK)/fstab.mt6785
+    $(DEVICE_PATH)/rootdir/etc/fstab.mt6785:$(TARGET_COPY_OUT_RECOVERY)/first_stage_ramdisk/fstab.mt6785
 
 # Keylayout
 PRODUCT_COPY_FILES += \
@@ -118,6 +125,31 @@ PRODUCT_PACKAGES += \
     libhwbinder \
     libhwbinder.vendor 
 
+# Init files
+PRODUCT_PACKAGES += \
+    fstab.mt6785 \
+    init.recovery.usb.rc \
+    ueventd.mt6785.rc \
+    factory_init.connectivity.rc \
+    factory_init.project.rc \
+    factory_init.rc \
+    init.aee.rc \
+    init.ago.rc \
+    init.connectivity.rc \
+    init.modem.rc \
+    init.mt6785.rc \
+    init.mt6785.usb.rc \
+    init.project.rc \
+    init.sensor_1_0.rc \
+    init.safailnet.rc \
+    init.stnfc.rc \
+    meta_init.connectivity.rc \
+    meta_init.modem.rc \
+    meta_init.project.rc \
+    meta_init.rc \
+    multi_init.rc \
+    init.recovery.mt6785.rc
+
 # Media
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/media/media_codecs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs.xml \
@@ -129,8 +161,9 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/media/media_codecs_google_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_audio.xml \
     $(LOCAL_PATH)/configs/media/media_codecs_google_le.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_le.xml 
 
-# fastbootd
+# Fastbootd
 PRODUCT_PACKAGES += \
+    android.hardware.fastboot@1.0-impl-mock \
     fastbootd
     
 # Light
