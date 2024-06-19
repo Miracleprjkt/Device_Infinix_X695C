@@ -1,0 +1,3 @@
+
+hal_server_domain(hal_gatekeeper_default, hal_gatekeeper)
+init_daemon_domain(hal_gatekeeper_default);

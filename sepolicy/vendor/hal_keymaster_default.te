@@ -1,0 +1,4 @@
+
+hal_server_domain(hal_keymaster_default, hal_keymaster)
+init_daemon_domain(hal_keymaster_default)
+get_prop(hal_keymaster_default, vendor_security_patch_level_prop);
