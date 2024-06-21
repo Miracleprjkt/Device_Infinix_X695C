@@ -36,6 +36,7 @@ AB_OTA_PARTITIONS := \
     system_ext \
     vbmeta
 
+# Boot control HAL
 PRODUCT_PACKAGES += \
     bootctrl.default \
     android.hardware.boot@1.2-impl \
@@ -65,6 +66,12 @@ AB_OTA_POSTINSTALL_CONFIG += \
 PRODUCT_PACKAGES += \
     checkpoint_gc \
     otapreopt_script
+
+# Health
+PRODUCT_PACKAGES += \
+    libsuspend \
+    android.hardware.health@2.1-impl \
+    android.hardware.health@2.1-service
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
