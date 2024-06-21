@@ -116,7 +116,7 @@ PRODUCT_COPY_FILES += \
 
 # Fstab
 PRODUCT_COPY_FILES += \
-    $(DEVICE_PATH)/rootdir/etc/fstab.mt6785:$(TARGET_COPY_OUT_RECOVERY)/first_stage_ramdisk/fstab.mt6785
+    $(DEVICE_PATH)/rootdir/etc/fstab.mt6785:$(TARGET_COPY_OUT_RAMDISK)/first_stage_ramdisk/fstab.mt6785
 
 # Keylayout
 PRODUCT_COPY_FILES += \
