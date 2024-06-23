@@ -38,10 +38,11 @@ AB_OTA_PARTITIONS := \
 
 # Boot control HAL
 PRODUCT_PACKAGES += \
-    bootctrl.default \
-    android.hardware.boot@1.2-impl \
-    android.hardware.boot@1.2-impl.recovery \
-    android.hardware.boot@1.2-service
+    android.hardware.boot@1.1-mtkimpl.recovery \
+    android.hardware.boot@1.1-mtkimpl
+
+PRODUCT_PACKAGES_DEBUG += \
+    bootctrl
 
 PRODUCT_PACKAGES += \
     update_engine \
@@ -67,11 +68,15 @@ PRODUCT_PACKAGES += \
     checkpoint_gc \
     otapreopt_script
 
-# Health
+# Health Hal
 PRODUCT_PACKAGES += \
-    libsuspend \
     android.hardware.health@2.1-impl \
-    android.hardware.health@2.1-service
+    android.hardware.health@2.1-service \
+    libhealthd.$(PRODUCT_PLATFORM)
+
+# MTK PlPath Utils
+PRODUCT_PACKAGES += \
+    mtk_plpath_utils.recovery
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
