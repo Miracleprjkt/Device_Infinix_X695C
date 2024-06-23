@@ -149,6 +149,12 @@ PRODUCT_PACKAGES += \
     android.hardware.keymaster@4.0.vendor \
     android.hardware.keymaster@4.0-service.beanpod
 
+PRODUCT_PACKAGES += \
+    libkeymaster4.vendor \
+    libkeymaster4support.vendor \
+    libpuresoftkeymasterdevice.vendor \
+    libsoft_attestation_cert.vendor
+
 # Init files
 PRODUCT_PACKAGES += \
     fstab.mt6785 \
