@@ -99,7 +99,14 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 PRODUCT_PACKAGES += \
     init.recovery.mt6785.rc \
     init.recovery.mt6785.sh 
- 
+
+# Gatekeeper
+PRODUCT_PACKAGES += \
+    gatekeeper.default
+    gatekeeper.beanpod \
+    android.hardware.gatekeeper@1.0-impl \
+    android.hardware.gatekeeper@1.0-service
+
 # Audio
     PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/audio/audio_device.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_device.xml \
@@ -136,6 +143,11 @@ PRODUCT_PACKAGES += \
     libhidltransport.vendor \
     libhwbinder \
     libhwbinder.vendor 
+
+# Keymaster
+PRODUCT_PACKAGES += \
+    android.hardware.keymaster@4.0.vendor \
+    android.hardware.keymaster@4.0-service.beanpod
 
 # Init files
 PRODUCT_PACKAGES += \
