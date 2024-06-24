@@ -102,7 +102,7 @@ PRODUCT_PACKAGES += \
 
 # Gatekeeper
 PRODUCT_PACKAGES += \
-    gatekeeper.default
+    gatekeeper.default \
     gatekeeper.beanpod \
     android.hardware.gatekeeper@1.0-impl \
     android.hardware.gatekeeper@1.0-service
