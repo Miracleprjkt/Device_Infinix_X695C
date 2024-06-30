@@ -1,5 +1,158 @@
 <?xml version="1.0"?>
-<compatibility-matrix version="2.0" type="framework">
+<compatibility-matrix version="4.0" type="framework">
+<hal format="aidl" optional="true">
+    <name>android.hardware.power</name>
+    <interface>
+        <name>IPower</name>
+        <instance>default</instance>
+    </interface>
+</hal>
+<hal format="hidl" optional="true">
+    <name>android.hardware.radio</name>
+    <version>1.0-2</version>
+    <interface>
+        <name>ISap</name>
+        <instance>slot2</instance>
+    </interface>
+</hal>
+<hal format="hidl" optional="true">
+    <name>android.hardware.wifi</name>
+    <version>1.0-6</version>
+    <interface>
+        <name>IWifi</name>
+        <instance>default</instance>
+    </interface>
+</hal>
+<hal format="hidl" optional="true">
+    <name>vendor.mediatek.hardware.aee</name>
+    <version>1.0</version>
+    <interface>
+        <name>IAee</name>
+        <instance>AEE</instance>
+        <instance>default</instance>
+    </interface>
+</hal>
+<hal format="hidl" optional="true">
+    <name>vendor.mediatek.hardware.bluetooth.audio</name>
+    <version>2.0-1</version>
+    <interface>
+        <name>IBluetoothAudioProvidersFactory</name>
+        <instance>default</instance>
+    </interface>
+</hal>
+<hal format="hidl" optional="true">
+    <name>vendor.mediatek.hardware.dfps</name>
+    <version>1.0</version>
+    <interface>
+        <name>IFpsPolicyService</name>
+        <instance>default</instance>
+    </interface>
+</hal>
+<hal format="hidl" optional="true">
+    <name>vendor.mediatek.hardware.dplanner</name>
+    <version>2.0</version>
+    <interface>
+        <name>IDPlanner</name>
+        <instance>default</instance>
+    </interface>
+</hal>
+<hal format="hidl" optional="true">
+    <name>vendor.mediatek.hardware.engineermode</name>
+    <version>1.0-3</version>
+    <interface>
+        <name>IEmd</name>
+        <instance>EmHidlServer</instance>
+    </interface>
+</hal>
+<hal format="hidl" optional="true">
+    <name>vendor.mediatek.hardware.gpu</name>
+    <version>1.0</version>
+    <interface>
+        <name>IGraphicExt</name>
+        <instance>default</instance>
+    </interface>
+</hal>
+<hal format="hidl" optional="true">
+    <name>vendor.mediatek.hardware.keyinstall</name>
+    <version>1.0</version>
+    <interface>
+        <name>IKeyinstall</name>
+        <instance>default</instance>
+    </interface>
+</hal>
+<hal format="hidl" optional="true">
+    <name>vendor.mediatek.hardware.keymaster_attestation</name>
+    <version>1.0-1</version>
+    <interface>
+        <name>IKeymasterDevice</name>
+        <instance>default</instance>
+    </interface>
+</hal>
+<hal format="hidl" optional="true">
+    <name>vendor.mediatek.hardware.lbs</name>
+    <version>1.0</version>
+    <interface>
+        <name>ILbs</name>
+        <instance>AgpsInterface</instance>
+        <instance>mtk_agps2framework</instance>
+        <instance>mtk_lppe_socket_agps</instance>
+        <instance>mtk_lppe_socket_bt</instance>
+        <instance>mtk_lppe_socket_lbs</instance>
+        <instance>mtk_lppe_socket_network</instance>
+        <instance>mtk_lppe_socket_sensor</instance>
+        <instance>mtk_mnld2debugService</instance>
+        <instance>mtk_mnld2mtklogger</instance>
+        <instance>mtk_mnld2nlputils</instance>
+    </interface>
+</hal>
+<hal format="hidl" optional="true">
+    <name>vendor.mediatek.hardware.mtkcodecservice</name>
+    <version>1.0-1</version>
+    <interface>
+        <name>IMtkCodecService</name>
+        <instance>default</instance>
+    </interface>
+</hal>
+<hal format="hidl" optional="true">
+    <name>vendor.mediatek.hardware.paytrigger</name>
+    <version>1.0</version>
+    <interface>
+        <name>IPayTrigger</name>
+        <instance>default</instance>
+    </interface>
+</hal>
+<hal format="hidl" optional="true">
+    <name>vendor.mediatek.hardware.tranHwInfo</name>
+    <version>1.0</version>
+    <interface>
+        <name>ITranHwInfo</name>
+        <instance>default</instance>
+    </interface>
+</hal>
+<hal format="hidl" optional="true">
+    <name>vendor.transsion.hardware.tne.tneengine</name>
+    <version>1.0</version>
+    <interface>
+        <name>ITne</name>
+        <instance>default</instance>
+    </interface>
+</hal>
+<hal format="hidl" optional="true">
+    <name>vendor.transsion.hardware.trancam.trancamserver</name>
+    <version>1.0</version>
+    <interface>
+        <name>ITrancamserver</name>
+        <instance>default</instance>
+    </interface>
+</hal>
+<hal format="hidl" optional="true">
+    <name>vendor.transsion.hardware.transtorage.storage</name>
+    <version>1.0</version>
+    <interface>
+        <name>IStorage</name>
+        <instance>default</instance>
+    </interface>
+</hal>
 <hal format="hidl" optional="true">
     <name>android.hardware.boot</name>
     <version>1.0</version>
