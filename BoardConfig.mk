@@ -189,4 +189,4 @@ DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := $(DEVICE_PATH)/vintf/framework_com
 TARGET_RELEASETOOLS_EXTENSIONS := $(DEVICE_PATH)
 
 # Firmware
--include device/infinix/X695C/BoardConfigFirmware.mk
+-include device/infinix/X695C-firmware/BoardConfigFirmware.mk
