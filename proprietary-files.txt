@@ -1429,6 +1429,7 @@ vendor/etc/dts/customer.cfg
 vendor/etc/dts/default_accessory44
 vendor/etc/dts/default_accessory48
 vendor/etc/dts/default_speaker48
+vendor/etc/dts/dts-eagle.lic
 vendor/etc/dts/dts_audio_settings
 vendor/etc/dts/game1_accessory44
 vendor/etc/dts/game1_accessory48
