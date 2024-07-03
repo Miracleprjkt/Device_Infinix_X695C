@@ -38,8 +38,10 @@ AB_OTA_PARTITIONS := \
 
 # Boot control HAL
 PRODUCT_PACKAGES += \
-    android.hardware.boot@1.1-mtkimpl.recovery \
-    android.hardware.boot@1.1-mtkimpl
+    android.hardware.boot@1.0-impl-1.1-mtkimpl \
+    android.hardware.boot@1.0-impl-1.1-mtkimpl-service \
+    android.hardware.boot@1.0-impl-1.1-mtkimpl.recovery
+    
 
 PRODUCT_PACKAGES_DEBUG += \
     bootctrl
@@ -68,15 +70,11 @@ PRODUCT_PACKAGES += \
     checkpoint_gc \
     otapreopt_script
 
-# Health Hal
+# Health
 PRODUCT_PACKAGES += \
     android.hardware.health@2.1-impl \
-    android.hardware.health@2.1-service \
-    libhealthd.$(PRODUCT_PLATFORM)
-
-# MTK PlPath Utils
-PRODUCT_PACKAGES += \
-    mtk_plpath_utils.recovery
+    android.hardware.health@2.1-impl.recovery \
+    android.hardware.health@2.1-service
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
@@ -146,14 +144,15 @@ PRODUCT_PACKAGES += \
 
 # Keymaster
 PRODUCT_PACKAGES += \
+    android.hardware.keymaster@3.0.vendor \
     android.hardware.keymaster@4.0.vendor \
-    android.hardware.keymaster@4.0-service.beanpod
-
-PRODUCT_PACKAGES += \
-    libkeymaster4.vendor \
-    libkeymaster4support.vendor \
-    libpuresoftkeymasterdevice.vendor \
-    libsoft_attestation_cert.vendor
+    android.hardware.keymaster@4.1.vendor \
+    libkeymaster4.vendor:64 \
+    libkeymaster4_1support.vendor:64 \
+    libkeymaster4support.vendor:64 \
+    libkeymaster_messages.vendor:64 \
+    libkeymaster_portable.vendor:64 \
+    libpuresoftkeymasterdevice.vendor:64
 
 # Init files
 PRODUCT_PACKAGES += \
