@@ -14,7 +14,7 @@ prebuilt_etc {
 prebuilt_etc {
     name: "init.recovery.usb.rc",
     src: "etc/init.recovery.usb.rc",
-    sub_dir: "init/hw" 
+    sub_dir: "init/hw",
     vendor: true,
 }
 
@@ -25,7 +25,6 @@ prebuilt_etc {
     vendor: true,
 }
 
-// Init configuration files
 prebuilt_etc {
     name: "factory_init.connectivity.rc",
     src: "etc/factory_init.connectivity.rc",
@@ -103,7 +102,6 @@ prebuilt_etc {
     vendor: true,
 }
 
-// Init configuration files
 prebuilt_etc {
     name: "init.recovery.usb.rc",
     src: "etc/init.recovery.usb.rc",
