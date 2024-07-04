@@ -34,7 +34,9 @@ AB_OTA_PARTITIONS := \
     product \
     vendor \
     system_ext \
-    vbmeta
+    vbmeta \
+    vbmeta_vendor \
+    vbmeta_system
 
 # Boot control HAL
 PRODUCT_PACKAGES += \
