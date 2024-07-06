@@ -4,59 +4,16 @@
 // SPDX-License-Identifier: Apache-2.0
 //
 
-// fstab
 prebuilt_etc {
     name: "fstab.mt6785",
     src: "etc/fstab.mt6785",
     vendor: true,
-}
-
-prebuilt_etc {
-    name: "init.recovery.usb.rc",
-    src: "etc/init.recovery.usb.rc",
-    sub_dir: "init/hw",
-    vendor: true,
-}
-
-prebuilt_etc {
-    name: "init.safailnet.rc",
-    src: "etc/init.safailnet.rc", 
-    sub_dir: "init/hw",
-    vendor: true,
-}
-
-prebuilt_etc {
-    name: "factory_init.connectivity.rc",
-    src: "etc/factory_init.connectivity.rc",
-    sub_dir: "init/hw",
-    vendor: true,
-}
-
-prebuilt_etc {
-    name: "factory_init.project.rc",
-    src: "etc/factory_init.project.rc",
-    sub_dir: "init/hw",
-    vendor: true,
-}
-
-prebuilt_etc {
-    name: "factory_init.rc",
-    src: "etc/factory_init.rc",
-    sub_dir: "init/hw",
-    vendor: true,
-}
-
-prebuilt_etc {
-    name: "init.aee.rc",
-    src: "etc/init.aee.rc",
-    sub_dir: "init/hw",
-    vendor: true,
+    ramdisk_available: true,
 }
 
 prebuilt_etc {
     name: "init.ago.rc",
     src: "etc/init.ago.rc",
-    sub_dir: "init/hw",
     vendor: true,
 }
 
@@ -96,6 +53,20 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
+    name: "init.recovery.usb.rc",
+    src: "etc/init.recovery.usb.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.safailnet.rc",
+    src: "etc/init.safailnet.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
     name: "init.sensor_1_0.rc",
     src: "etc/init.sensor_1_0.rc",
     sub_dir: "init/hw",
@@ -110,36 +81,15 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
-    name: "meta_init.connectivity.rc",
-    src: "etc/meta_init.connectivity.rc",
-    sub_dir: "init/hw",
-    vendor: true,
+    name: "init.target.rc",
+    src: "etc/init.target.rc",
+    sub_dir: "init",
+    system_ext_specific: true,
 }
 
 prebuilt_etc {
-    name: "meta_init.modem.rc",
-    src: "etc/meta_init.modem.rc",
-    sub_dir: "init/hw",
-    vendor: true,
-}
-
-prebuilt_etc {
-    name: "meta_init.project.rc",
-    src: "etc/meta_init.project.rc",
-    sub_dir: "init/hw",
-    vendor: true,
-}
-
-prebuilt_etc {
-    name: "meta_init.rc",
-    src: "etc/meta_init.rc",
-    sub_dir: "init/hw",
-    vendor: true,
-}
-
-prebuilt_etc {
-    name: "multi_init.rc",
-    src: "etc/multi_init.rc",
-    sub_dir: "init/hw",
+    name: "ueventd.mt6785.rc",
+    filename: "ueventd.rc",
+    src: "etc/ueventd.mt6785.rc",
     vendor: true,
 }
