@@ -38,15 +38,11 @@ AB_OTA_PARTITIONS := \
     vbmeta_vendor \
     vbmeta_system
 
-# Boot control HAL
+# A/B
 PRODUCT_PACKAGES += \
-    android.hardware.boot@1.0-impl-1.1-mtkimpl \
-    android.hardware.boot@1.0-impl-1.1-mtkimpl-service \
-    android.hardware.boot@1.0-impl-1.1-mtkimpl.recovery
-    
-
-PRODUCT_PACKAGES_DEBUG += \
-    bootctrl
+    android.hardware.boot@1.2-impl \
+    android.hardware.boot@1.2-impl.recovery \
+    android.hardware.boot@1.2-service
 
 PRODUCT_PACKAGES += \
     update_engine \
@@ -77,6 +73,9 @@ PRODUCT_PACKAGES += \
     android.hardware.health@2.1-impl \
     android.hardware.health@2.1-impl.recovery \
     android.hardware.health@2.1-service
+
+    PRODUCT_PACKAGES += \
+    android.hardware.health@2.0
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
@@ -149,12 +148,15 @@ PRODUCT_PACKAGES += \
     android.hardware.keymaster@3.0.vendor \
     android.hardware.keymaster@4.0.vendor \
     android.hardware.keymaster@4.1.vendor \
-    libkeymaster4.vendor:64 \
-    libkeymaster4_1support.vendor:64 \
-    libkeymaster4support.vendor:64 \
-    libkeymaster_messages.vendor:64 \
-    libkeymaster_portable.vendor:64 \
-    libpuresoftkeymasterdevice.vendor:64
+    libkeymaster4.vendor \
+    libkeymaster4_1support.vendor \
+    libkeymaster4support.vendor \
+    libkeymaster_messages.vendor \
+    libkeymaster_portable.vendor \
+    libpuresoftkeymasterdevice.vendor
+
+PRODUCT_PACKAGES += \
+    android.hardware.keymaster@4.0.vendor
 
 # Init files
 PRODUCT_PACKAGES += \
