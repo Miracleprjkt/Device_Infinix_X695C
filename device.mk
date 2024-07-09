@@ -161,7 +161,8 @@ PRODUCT_PACKAGES += \
 # Init files
 PRODUCT_PACKAGES += \
     fstab.mt6785 \
-    init.recovery.usb.rc \
+    init.recovery.mt6785.rc \
+    init.rc \
     ueventd.mt6785.rc \
     init.modem.rc \
     init.ago.rc \
