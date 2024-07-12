@@ -150,9 +150,6 @@ BOARD_HAS_LARGE_FILESYSTEM := true
 # RIL
 ENABLE_VENDOR_RIL_SERVICE := true
 
-# Selinux
-include device/mediatek/sepolicy_vndr/SEPolicy.mk
-
 # Sepolicy
 SELINUX_IGNORE_NEVERALLOWS := true
 TARGET_USES_PREBUILT_VENDOR_SEPOLICY := true
@@ -193,6 +190,3 @@ DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := $(DEVICE_PATH)/vintf/framework_com
 
 # Releasetools
 TARGET_RELEASETOOLS_EXTENSIONS := $(DEVICE_PATH)
-
-# Firmware
--include device/infinix/X695C-firmware/BoardConfigFirmware.mk
